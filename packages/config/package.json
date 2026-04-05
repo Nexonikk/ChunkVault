@@ -1,0 +1,13 @@
+{
+  "name": "@repo/config",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./typescript": "./typescript.json"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}

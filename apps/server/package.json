@@ -1,0 +1,30 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "check-types": "tsc --noEmit",
+    "db:push": "drizzle-kit push --config=../../packages/db/drizzle.config.ts",
+    "db:generate": "drizzle-kit generate --config=../../packages/db/drizzle.config.ts",
+    "db:migrate": "drizzle-kit migrate --config=../../packages/db/drizzle.config.ts",
+    "db:studio": "drizzle-kit studio --config=../../packages/db/drizzle.config.ts"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.11.4",
+    "@hono/zod-validator": "^0.2.2",
+    "@repo/db": "*",
+    "@repo/env": "*",
+    "hono": "^4.4.0",
+    "dotenv": "^16.4.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "drizzle-kit": "^0.21.4",
+    "tsx": "^4.11.0",
+    "typescript": "^5.4.5"
+  }
+}

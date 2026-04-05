@@ -1,0 +1,20 @@
+{
+  "name": "@repo/db",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./src/index.ts",
+  "exports": { ".": "./src/index.ts" },
+  "scripts": {
+    "_db:push": "drizzle-kit push --config=drizzle.config.ts",
+    "_db:generate": "drizzle-kit generate --config=drizzle.config.ts",
+    "_db:studio": "drizzle-kit studio --config=drizzle.config.ts"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.30.10",
+    "postgres": "^3.4.4"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.21.4",
+    "typescript": "^5.4.5"
+  }
+}
